@@ -1,6 +1,7 @@
 $(document).ready(function () {
+
     var APIKEY = config.API_KEY;
-    
+
     $("#search-button").on("click", function () {
         var searchValue = $("#search-value").val();
 
@@ -97,7 +98,7 @@ $(document).ready(function () {
     function getUVIndex(lat, lon) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=7ba67ac190f85fdba2e2dc6b9d32e93c&lat=" + lat + "&lon=" + lon,
+            url: "http://api.openweathermap.org/data/2.5/uvi?appid="+APIKEY+"&lat=" + lat + "&lon=" + lon,
             dataType: "json",
             success: function (data) {
                 var uv = $("<p>").text("UV Index: ");
