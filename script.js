@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var APIKEY = "8a8368dd678a1da71667f7d989e8e4e7";
+    var APIKEY = config.API_KEY;
+    
     $("#search-button").on("click", function () {
         var searchValue = $("#search-value").val();
 
